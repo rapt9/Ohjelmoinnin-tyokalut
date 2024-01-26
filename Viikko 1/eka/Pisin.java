@@ -1,4 +1,4 @@
-public class Main {
+public class Pisin {
 
     public static void main(String[] args) {
         String pisin = "";
