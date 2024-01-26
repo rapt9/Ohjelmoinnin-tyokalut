@@ -1,12 +1,17 @@
-import java.util.Scanner;
-
 public class Main {
 
     public static void main(String[] args) {
-        Scanner lukija = new Scanner(System.in);
-        System.out.println("Anna nimi: ");
-        String nimi = lukija.nextLine();
-        System.out.println("moikka, " + nimi);
-        System.out.println("testi, " + nimi);
+        String pisin = "";
+        if (args.length == 0) {
+            System.out.println("Ei parametreja");
+            System.exit(0);
+        }
+        for (String parametri : args) {
+            if (parametri.length() > pisin.length()) {
+                pisin = parametri;
+            }
+        }
+        System.out.println("Pisin parametri: " + pisin);
     }
+
 }
